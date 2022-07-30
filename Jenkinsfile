@@ -16,10 +16,10 @@ pipeline{
                sh 'mvn package'
             }
         }
-        post {
-            success {
-                echo 'test'
+        stage('upload'){
+            steps{
+               s3Upload(file:'jbHelloWorldMaven020', bucket:'AmexGBT', path:'target/jb-hello-world-maven-0.2.0.ja')
             }
-        }        
+        }
     }
 }
