@@ -8,7 +8,7 @@ pipeline{
     stages{
         stage('checkout'){
             steps{
-                checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: '', url: 'https://github.com/Kouangoua/Amex-GBT.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*']], extensions: [], userRemoteConfigs: [[credentialsId: '', url: 'https://github.com/Kouangoua/Amex-GBT.git']]])
             }
         }
         stage('build'){
