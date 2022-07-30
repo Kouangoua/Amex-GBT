@@ -18,7 +18,7 @@ pipeline{
         }
         stage('upload'){
             steps{
-               s3Upload(sourceFile:'jbHelloWorldMaven020', bucket:'AmexGBT', path:'target/jb-hello-world-maven-0.2.0.ja')
+               s3Upload(entries:'jbHelloWorldMaven020', bucket:'AmexGBT', path:'target/jb-hello-world-maven-0.2.0.ja')
             }
         }
     }
